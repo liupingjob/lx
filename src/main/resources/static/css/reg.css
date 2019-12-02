@@ -1,0 +1,256 @@
+@import url(../../base.css);
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+ul,ol,li{list-style:none;}
+address, cite, dfn, em, var {font-style: normal;}
+input, label, img, th{vertical-align: middle;}
+img{border: medium none;}
+
+.text-l{text-align: left;}
+.text-r{text-align: right;}
+.left{float: left;}
+.right{float: right;}
+
+body{
+	text-align:center;
+	font-size:14px; 
+	font-family:'Microsoft Yahei','宋体',tahoma,arial,sans-serif;
+}
+
+.wrapper{ width:990px; margin:0 auto;text-align: center}
+.hr{margin:10px 0;}
+a {color: #444444; text-decoration: none;}
+a:hover{  color: #000000;text-decoration:underline;}
+
+.hidden {display: none;}
+
+
+/* header */
+.lng {
+    color: #333;
+    font-size: 12px;
+    margin: 1px 0;
+    padding: 5px 0;
+    text-align: right;
+    width: 100%;
+}
+
+.lng span{padding:0 5px;}
+.lng span a{color: #333;}
+.lng span a:hover{color: #000; text-decoration:none;}
+
+
+/* content */
+h1{color: #999; font-size:18px;}
+
+#content{
+    text-align:left;
+    font-size:14px; 
+    font-family:'Microsoft Yahei','宋体',tahoma,arial,sans-serif;
+}
+#content a {color: blue; text-decoration: underline;}
+#content a:hover{  color: blue;text-decoration:underline;}
+
+#content li{border-bottom: 1px solid #ccc; overflow: hidden;}
+#content li h2{ font-size:16px; padding:1px 0;}
+#content li h4{ font-size:14px; padding:1px 0; color: #666;}
+
+#content h2{ font-size:18px; padding:5px 0;}
+#content h4{ font-size:22px; padding:5px 0;}
+
+#content ul.speaker .left{ width:120px; text-align:center;}
+#content ul.speaker .right{ width:620px;}
+#content ul.speaker li{padding:20px 0;}
+
+.table-list{font-size:12px;}
+.table-list table th {
+    background:#0E386E;
+    color: #fff;
+    font-weight:bold;
+}
+
+.table-list a {color: blue; text-decoration: underline;}
+.table-list a:hover{  color: blue;text-decoration:underline;}
+
+
+.main{ padding:5px 1px; margin:0 0 0 0;  height:auto;}
+.content{padding:0}
+
+.dbg {
+    background: url("../../../images/1.png") no-repeat scroll left center transparent;
+    height: 32px;
+    width: 100%;
+}
+.dbg div {
+    height: 32px;
+    width: 100%;
+}
+.dbg .hover1 {
+    background: url("../../../images/1h.png") no-repeat scroll left center transparent;
+}
+.dbg .hover2 {
+    background: url("../../../images/2h.png") no-repeat scroll left center transparent;
+}
+.dbg .hover3 {
+    background: url("../../../images/2.png") no-repeat scroll left center transparent;
+}
+.panel {
+    margin-top: 15px;
+    border: 1px solid #CCCCCC;
+     text-align: center;
+ }
+.panel_628 {
+    margin: 0 0 24px;
+    padding: 0;
+    width: 100%;
+    font-size: 12px;
+}
+.panel_head2 {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border-bottom: 1px solid #D5D5D3;
+    color: #005580;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    padding: 6px 8px 7px;
+    width: auto;
+}
+.panel_body {
+    margin: 6px 8px 7px;
+    width: auto;
+}
+.ticket_table td {
+    border-bottom: 1px solid #D5D5D3;
+    padding: 5px;
+}
+
+table.eachtable{padding:0 20px 20px 20px;width: 100%;}
+table.eachtable tr{line-height: 20px;  }
+table.eachtable tr td span.msg{
+	display: block;
+     padding: 4px;
+    text-indent: 12px;
+}
+table.eachtable .right{float:left;}
+table.eachtable td input[type="text"]{
+    padding: 2px 4px;
+    
+}
+
+table.eachtable td input,table.eachtable td textarea,table.eachtable td select{font-family:'Microsoft Yahei','宋体',tahoma,arial,sans-serif;font-size: 14px;}
+
+table.eachtable td textarea{width: 270px; height: 60px;padding: 4px;}
+
+table.eachtable td label{ padding-right: 10px; line-height:28px;}
+table.eachtable td label input{ margin:0 5px;}
+table.eachtable td select{
+    height: 25px;
+    padding: 2px 0 2px 0;
+}
+table.eachtable .error{padding:0 5px;}
+fieldset {
+    border: 1px solid #D8D8D8;
+    margin: 5px 0;
+    padding: 10px;
+    margin: 10px;
+}
+fieldset legend {
+    background-color: #F9F9F9;
+    border: 1px solid #D8D8D8;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+fieldset legend span{font-size: 14px;padding: 0 0 0 20px; color:#999;cursor: pointer;}
+
+tr.grouptitle{background: #666;}
+tr.tr_0{ background:none; }
+tr.tr_1{ background:#efefef; }
+
+tr.grouptitle h3{font-size: 12px; color: #ccc; margin-left:20px; }
+
+.submit{text-align: center;}
+#addOneUser,#gopay,#clogin,.clogin {
+    background:#005EAC;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Microsoft Yahei",Tahoma;
+    font-size: 16px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0;
+    width: 100px;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px 3px 3px 3px;
+}
+#gopay[disabled="disabled"]{ background:#ccc;cursor:default;cursor:not-allowed;}
+
+.loginframe{background:#FFFFFF;    border: 1px solid #ccc;    height: 220px;    left: 50%; top:200px;
+    margin-left: -200px;    position: absolute;    width: 400px; display:none; overflow: hidden; text-align: center;}
+#loginframe li{ padding:5px 0; font-size: 16px;}
+
+.loadingmsg {
+    background: none repeat scroll 0 0 rgb(0, 0, 0);
+    border-radius: 25px 1px 25px 1px;
+    display: none;
+    height: 180px;
+    left: 50%;
+    margin: -100px 0 0 -210px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    width: 400px;
+    cursor: pointer;
+}
+.loadingmsg table {
+    background: none repeat scroll 0 0 rgb(255, 255, 255);
+    border-radius: 25px 1px 25px 1px;
+    height: 100%;
+    width: 100%;
+}
+.loading {
+    background: url("../../../images/bloading_blue.gif") no-repeat scroll center center transparent;
+    width: 32px;
+}
+.msg {
+    color: #005EAC;
+    font-size: 14px;
+    text-align: left;
+}
+.msg div{
+    height: 120px;
+    overflow-y: auto;
+    padding-left:20px;
+}
+.msg .error {
+    color: #FF0000;
+}
+.msg .common {
+    color: #005EAC;
+}
+.msg .right {
+    color: #009900;
+}
+
+.logmsg{ color:#005eac; font-size:14px; padding:10px;border: 1px solid #D5D5D3;}
+
+
+
+.footer_area{width:auto; height:auto; border-top:1px solid #eee; border-bottom:1px solid #eee; background:#fdfdfd; padding:10px 0;}
+.footer_area .wrapper{ padding:0 0 0 0;}
+.footer_area .links,.footer_area p{ font-size:12px;line-height:20px; color:#666;}
+.footer_area a,.footer_area a:hover,.footer_area a:visited{ text-decoration:none; color:#999;}
+
+.footer_area .links .sep{
+    color: #D0D3D7;
+    margin: 0 3px;
+}
+.footer_area p{ margin:0; padding:0; color: #ccc; font-size:10px; text-align:left;}
+
+.footer_area .copyright_link{
+    color: #999;
+    margin: 0 3px;
+}
+

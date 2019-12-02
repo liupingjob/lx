@@ -1,0 +1,11 @@
+.p_0{padding: 0;}
+.container{max-width: 750px;background-color: #fcfcfc;}
+.index_bg, .content_bg{min-height: calc(100vh);}
+.index_bg{position: relative;padding-bottom: 30%;background-image: url("../images/bottom.png")/*tpa=https://7e.7-event.cn/7e/demo/victory/1/images/bottom.png*/;background-repeat: no-repeat;background-position: bottom center;background-size: 100%;}
+.banner{padding: 0% 0 20%;}
+.nav_info{display: flex;display: -webkit-flex;flex-wrap: wrap;-webkit-flex-wrap: wrap;justify-content: space-between;-webkit-justify-content: space-between;}
+.nav_info>.item {padding-bottom: 10px;width: 23%;padding: 15px 0 8px;text-align: center;background-color: #edf0f5;border-radius: 6px;margin-bottom: 10px;display: block;text-decoration: none;float: left;margin: 2% 1%;}
+.nav_info .nav_icon{height: 35px;margin-bottom: 5px;}
+.nav_info>.item .tit{color: #c19568;font-weight: 700;}
+/* .indexDataTime_info{position: absolute;left: 0;bottom: 0;width: 100%;} */
+ 

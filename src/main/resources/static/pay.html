@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>湖北省医院大会报名系统！</title>
+    <link href="css/reg.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
+    <link href="css/chosen.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/css/laydate.css" id="layuicss-laydate">
+    <style type="text/css">
+
+        .button {
+            width: 68%;
+            padding: 15px;
+            margin: 15px;
+            background: #c62d1f;
+            background-image: -webkit-linear-gradient(top, #c62d1f, #f24437);
+            background-image: -moz-linear-gradient(top, #c62d1f, #f24437);
+            background-image: -ms-linear-gradient(top, #c62d1f, #f24437);
+            background-image: -o-linear-gradient(top, #c62d1f, #f24437);
+            background-image: linear-gradient(to bottom, #c62d1f, #f24437);
+            -webkit-border-radius: 18;
+            -moz-border-radius: 18;
+            border-radius: 18px;
+            text-shadow: 0px 1px 0px #810e05;
+            -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+            -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+            box-shadow: 3px 4px 0px 0px #8a2a21;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 12px 30px 12px 30px;
+            border: solid #d02718 1px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            color: #ffffff;
+            background: #f24437;
+            text-decoration: none;
+        }
+
+        .img {
+            text-align: center;
+        }
+
+
+        .img img {
+            width: 98%;
+            height: auto;
+            width: auto \9;
+            width: 98%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper" style="width: auto">
+    <div class="img" style="width: auto;">
+        <a href="/">
+            <img src="/images/baoming_toubu.jpg" style="display:block;" class="img"/></a></div>
+    <div class="img" style="width: auto;text-align: center;font-size: 36px;">
+        报名提交成功！<br>报名费用：<span id="money" th:text="${price1}">0.00</span>元
+    </div>
+    <div class="main" style="text-align: center;height: 500px;" align="center">
+
+        <div>
+            <a href="/">
+                <button class="button" style="background-color: #4cae4c;background:#2a62bc; "> 大会现场缴费</button>
+            </a></div>
+        <div>
+            <a href="/images/code.jpg" style="display:block;" class="img"/>
+            <button class="button" style="background-color: #5cb85c;background:#ac2925; "> 在线微信支付</button>
+            </a>
+        </div>
+
+
+    </div>
+    <div class="footer_area footer">
+        <div class="wrapper">
+            <div class="copyright clearfix" style="text-align: center">
+                <p class="copyright_en">
+                    <a style="text-decoration:none;" href="/images/lianxi_women.png" target="_blank">联系我们！</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css">
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+<link href="css/idialog.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var count = 0;
+
+    $(document).ready(function () {
+        var domain = location.search;
+        if (domain != undefined && domain != '' && domain.indexOf("a=") >= 0) {
+            $("#uinfo0").show();
+        } else {
+            $("#uinfo0").hide();
+        }
+    });
+
+</script>
+</body>
+</html>

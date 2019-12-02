@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>湖北省医院大会报名系统！</title>
+    <link href="css/reg.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
+    <link href="css/chosen.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/laydate.css" id="layuicss-laydate">
+    <style type="text/css">
+        .img {
+            text-align: center;
+        }
+
+        .form-error {
+            border-color: red;
+        }
+
+        .img img {
+            width: 98%;
+            height: auto;
+            width: auto \9;
+            width: 98%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper" style="width: auto">
+    <div class="img" style="width: auto;">
+        <a href="/">
+            <img src="images/baoming_toubu.jpg" style="display:block;" class="img"/></a></div>
+
+    <div class="main">
+        <div class="content">
+
+            <div class="panel">
+                <form id="regform" enctype="multipart/form-data" method="post"
+                      action="/addUser">
+
+
+                    <div class="panel_628" id="info_panel">
+                        <fieldset class="uinfo" id="uinfo0">
+                            <legend title="填写嘉宾信息">分支机构名称</legend>
+                            <select name="user[0].org" id="org" style="height: 30px;">
+                                <option value="" selected>请选择分支机构</option>
+                                <option value="病案质量监控管理专业委员会">病案质量监控管理专业委员会</option>
+                                <option value="医院营养管理专业委员会">医院营养管理专业委员会</option>
+                                <option value="医院药事管理专业委员会">医院药事管理专业委员会</option>
+                                <option value="医疗质量与安全管理专业委员会">医疗质量与安全管理专业委员会</option>
+                                <option value="医疗美容管理专业委员会">医疗美容管理专业委员会</option>
+                                <option value="医院感染管理专业委员会">医院感染管理专业委员会</option>
+                                <option value="血液净化管理专业委员会">血液净化管理专业委员会</option>
+                                <option value="医院后勤管理专业委员会">医院后勤管理专业委员会</option>
+                                <option value="医院行政管理专业委员会">医院行政管理专业委员会</option>
+                                <option value="门（急）诊管理专业委员会">门（急）诊管理专业委员会</option>
+                                <option value="高校管理专业委员会">高校管理专业委员会</option>
+                                <option value="医院社会工作和志愿服务管理专业委员会">医院社会工作和志愿服务管理专业委员会</option>
+                                <option value="医院医疗保险管理专业委员会">医院医疗保险管理专业委员会</option>
+                                <option value="民营医院管理专业委员会">民营医院管理专业委员会</option>
+                                <option value="临床检验管理专业委员会">临床检验管理专业委员会</option>
+                                <option value="传染病管理专业委员会">传染病管理专业委员会</option>
+                                <option value="企业医院管理专业委员会">企业医院管理专业委员会</option>
+                                <option value="医院绩效管理专业委员会">医院绩效管理专业委员会</option>
+                                <option value="县（市）级医院管理专业委员会">县（市）级医院管理专业委员会</option>
+                                <option value="DRGs数据与应用管理专业委员会">DRGs数据与应用管理专业委员会</option>
+                                <option value="人力资源管理专委会">人力资源管理专委会</option>
+                                <option value="急救中心（站）管理专委会">急救中心（站）管理专委会</option>
+                                <option value="优秀作者论文">优秀作者论文</option>
+                                <option value="理事单位成员报名">理事单位成员报名</option>
+                                <option value="其他参会代表报名">其他参会代表报名</option>
+                            </select>
+                        </fieldset>
+
+
+                        <fieldset class="uinfo" id="uinfo1">
+                            <legend title="填写嘉宾信息">填写嘉宾信息</legend>
+                            <table cellpadding="2" class="eachtable">
+                                <tbody>
+
+                                <tr class="tr_0">
+                                    <td align="right"><span>姓名</span>：</td>
+                                    <td width="12px"><span class="error">*</span></td>
+                                    <td class="text">
+                                        <div thiskey="name" class="right">
+                                            <input type="hidden" name="user[0].org" value="" class="org">
+                                            <input type="text" maxlength="60" value="" required="required"
+                                                   name="user[0].name" class="input-text name"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+                                <tr class="tr_1">
+                                    <td align="right"><span>单位</span>：</td>
+                                    <td width="12px"><span class="error">*</span></td>
+                                    <td class="text">
+                                        <div thiskey="company" class="right">
+                                            <input type="text" maxlength="60" value="" required="required"
+                                                   name="user[0].company" class="input-text company"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+                                <tr class="tr_0">
+                                    <td align="right"><span>职务</span>：</td>
+                                    <td width="12px"><span class="error">*</span></td>
+                                    <td class="text">
+                                        <div thiskey="title" class="right">
+                                            <input type="text" maxlength="60" value="" required="required"
+                                                   name="user[0].title" class="input-text title"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+                                <tr class="tr_1">
+                                    <td align="right"><span>手机</span>：</td>
+                                    <td width="12px"><span class="error">*</span></td>
+                                    <td class="text">
+                                        <div thiskey="mobile" class="right">
+                                            <input type="text" maxlength="60" value="" required="required"
+                                                   name="user[0].mobile" class="input-text mobile phone"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+                                <tr class="tr_0">
+                                    <td align="right"><span>邮箱</span>：</td>
+                                    <td width="12px"><span class="error">*</span></td>
+                                    <td class="text">
+                                        <div thiskey="email" class="right">
+                                            <input type="text" maxlength="60" value="" required="required"
+                                                   name="user[0].email" class="input-text email"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+
+                                <tr class="tr_1 type_radio">
+                                    <td align="right"><span>性别</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span class="error">*</span></td>
+                                    <td class="radio">
+                                        <div thiskey="A" thisid="2596" class="right A"><label><input type="radio"
+                                                                                                     checked
+                                                                                                     value="男"
+                                                                                                     name="user[0].sex"><span>男</span></label><label><input
+                                                type="radio" value="女" name="user[0].sex"><span>女</span></label>
+                                        </div>
+                                        <span class="msg"
+                                              style="float:left;height:auto;overflow:auto;width:auto;text-indent:0;"></span>
+                                    </td>
+                                </tr>
+
+                                <tr class="tr_0 type_text">
+                                    <td align="right"><span>单位地址</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span class="error"></span></td>
+                                    <td class="text">
+                                        <div thiskey="C" class="right C" thisid="2602">
+                                            <input type="text" maxlength="60" value=""
+                                                   name="user[0].addr" class="input-text addr1"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+
+
+                                <tr class="tr_1 type_text">
+                                    <td align="right"><span>联系人</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span class="error"></span></td>
+                                    <td class="text">
+                                        <div thiskey="L" class="right L" thisid="2617">
+                                            <input type="text" maxlength="60" value=""
+                                                   name="user[0].lxr" class="input-text lxr "></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+                                <tr class="tr_0 type_text">
+                                    <td align="right"><span>联系人手机号</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span class="error"></span></td>
+                                    <td class="text">
+                                        <div thiskey="M" class="right M" thisid="2620">
+                                            <input type="text" maxlength="60" value=""
+                                                   name="user[0].phone" class="input-text lxrsjh mobile"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+
+                                <tr class="tr_1 type_text">
+                                    <td align="right"><span>发票抬头</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span></span></td>
+                                    <td class="text">
+                                        <div thiskey="X" class="right X" thisid="10858">
+                                            <input type="text" maxlength="60" value=""
+                                                   name="user[0].piao" class="input-text fptt"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+                                <tr class="tr_0 type_text">
+                                    <td align="right"><span>纳税人识别号</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span></span></td>
+                                    <td class="text">
+                                        <div thiskey="Y" class="right Y" thisid="10861">
+                                            <input type="text" maxlength="60" value=""
+                                                   name="user[0].sbh" class="input-text sbh"></div>
+                                        <span class="msg"></span></td>
+                                </tr>
+
+                                <tr class="tr_1 type_text">
+                                    <td align="right"><span>是否住宿</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span>*</span></td>
+                                    <td class="radio">
+                                        <div thiskey="A" thisid="2596" class="right A"><label><input type="radio" title="a0"
+                                                                                                     value="是"
+                                                                                                     name="user[0].room"
+                                                                                                     class="room"><span>是</span></label><label><input
+                                                type="radio" value="否" name="user[0].room" checked="checked"  title="a0"
+                                                class="room"><span>否</span></label>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr class="tr_0 isroom"   id="a0">
+                                    <td align="right"><span>房间类型</span>：
+                                    </td>
+                                    <td style="width: 12px;"><span class="error">*</span></td>
+                                    <td class="text">
+                                        <div thiskey="C" class="right C" thisid="2602">
+                                            <select name="user[0].homeName">
+                                                <option value="单间">单间</option>
+                                                <option value="标间">标间</option>
+                                            </select>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+
+
+                        <div class="submit" style="width: auto">
+                            <div> <span class="msg" id="msgDetail"
+                                        style="text-align:center; color:#000; font-size:16px; padding:10px 0;color: red"></span>
+                            </div>
+                            <div class="irooms" style="text-align:center; color:#000; font-size:16px; padding:5px 0;">
+                                <input type="hidden" name="price1" id="money3" value="800" title="800">
+                                <span style="font-weight: bold;">参会费用: <span id="money">800.00</span>元</span></div>
+                        </div>
+                        <input type="button" id="addOneUser" value="再加一人"/> <input type="button" id="gopay"
+                                                                                   value="确认登记">
+                    </div>
+                </form>
+            </div>
+
+            <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+            <script type="text/javascript">
+                var count = 0;
+
+                $(document).ready(function () {
+                    var domain = location.search;
+                    if (domain != undefined && domain != '' && domain.indexOf("a=") >= 0) {
+                        $("#uinfo0").show();
+                        $("#org option[value='优秀作者论文']").remove();
+                        $("#org option[value='理事单位成员报名']").remove();
+                        $("#org option[value='其他参会代表报名']").remove();
+                    } else {
+                        $("#uinfo0").hide();
+                    }
+                    if (domain != undefined && domain != '' && domain.indexOf("b=") >= 0) {
+                        $("#org").val("其他参会代表报名");
+                    }
+                    if (domain != undefined && domain != '' && domain.indexOf("c=") >= 0) {
+                        $("#org").val("理事单位成员报名");
+                    }
+                    if (domain != undefined && domain != '' && domain.indexOf("d=") >= 0) {
+                        $("#money").html("600.00");
+                        $("#money3").val("600");
+                        $("#money3").attr("title","600");
+                        $("#org").val("优秀作者论文");
+                    }
+
+                    $(".isroom").hide();
+                    $("#addOneUser").click(function () {
+                        var temp = $(".uinfo:last").html();
+                        count++;
+                        temp = temp.replace(new RegExp('\\['+(count-1)+'\\]', 'g'), "[" + count + "]");
+                        temp = temp.replace(new RegExp('a'+((count-1)), 'g'), "a" + count );
+
+                        $(".uinfo:last").after(' <fieldset class="uinfo" id="uinfo1">' + temp + '</fieldset>');
+
+                        $("legend").each(function (i) {
+                            if (i > 0) {
+                                $(this).html($(this).attr("title") + i);
+                            }
+                        });
+                        $("#money").html($("#money").html() - 0 + ($("#money3").attr("title")-0));
+                        $("#money3").val($("#money").html());
+                        $(".company:last").val($(".company:first").val());
+                        //$(".title:last").val($(".title:first").val());
+                        //$(".phone:last").val($(".phone:first").val());
+                        $(".email:last").val($(".email:first").val());
+                        $(".addr:last").val($(".addr:first").val());
+                        $(".addr1:last").val($(".addr1:first").val());
+                        $(".lxr:last").val($(".lxr:first").val());
+                        $(".lxrsjh:last").val($(".lxrsjh:first").val());
+                        $(".fptt:last").val($(".fptt:first").val());
+                        $(".sbh:last").val($(".sbh:first").val());
+                        $("#a"+count).hide();
+
+                        $("[title=a"+count+"]").click(function () {
+                            var room = $(this).val();
+                            var title=$(this).attr("title");
+                            if (room == '是') {
+                                $("#"+title).show();
+                            } else {
+                                $("#"+title).hide();
+                            }
+                        });
+                        $(".org").val($("#org").val());
+                     });
+                    $(".room").click(function () {
+                        var room = $(this).val();
+                        var title=$(this).attr("title");
+                        if (room == '是') {
+                            $("#"+title).show();
+                        } else {
+                            $("#"+title).hide();
+                        }
+                    });
+
+                    $("#gopay").click(function () {
+                        var hasNull = 0;
+
+                        $("input[required='required']").each(function () {
+                            if ($(this).val() == '') {
+                                hasNull++;
+                                $(this).addClass('form-error');
+                            } else {
+                                $(this).removeClass('form-error');
+                            }
+                        });
+                        var checked = $('input:radio:checked').val();
+                        var sindex=$("#org").val();
+                        if (hasNull > 0) {
+                            $("#msgDetail").html("请输入上面红框中必填项！谢谢！");
+                        } else if (domain != undefined && domain != '' && domain.indexOf("a=") >= 0&&sindex=='') {
+                            alert("请选择分支机构名称！");
+                        } else {
+                            alert("请确认填写信息的准确！本院将会邮件给你邀请涵！");
+                            $("form:first").submit();
+                        }
+                    });
+
+
+                    $(".mobile").change(function () {
+                        if (isNaN($(this).val())) {
+                            $("#msgDetail").html("手机号必须输入数字！谢谢！");
+                            $(this).val("");
+                            return;
+                        } else {
+                            $("#msgDetail").html("");
+                        }
+                    });
+                    $(".addr").change(function () {
+                        var checked = $('input:radio:checked').val();
+                        if (isNaN($(this).val())) {
+                            $("#msgDetail").html("必须输入数字！谢谢！");
+                            $(this).val("");
+                            return;
+                        } else {
+                            $("#msgDetail").html("");
+                        }
+
+                    });
+
+
+                });
+            </script>
+
+        </div>
+    </div>
+    <div class="footer_area footer">
+        <div class="wrapper">
+            <div class="copyright clearfix" style="text-align: center">
+                <p class="copyright_en">
+                    <a style="text-decoration:none;" href="images/lianxi_women.png" target="_blank">联系我们！</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css">
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+<link href="css/idialog.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css">
+</body>
+</html>

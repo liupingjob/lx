@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_lx" default="compile.module.lx">
+  <dirname property="module.lx.basedir" file="${ant.file.module_lx}"/>
+  
+  <property name="module.jdk.home.lx" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.lx" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.lx" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.lx" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="lx.output.dir" value="${module.lx.basedir}/target/classes"/>
+  <property name="lx.testoutput.dir" value="${module.lx.basedir}/target/test-classes"/>
+  
+  <path id="lx.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="lx.module.production.classpath">
+    <path refid="${module.jdk.classpath.lx}"/>
+  </path>
+  
+  <path id="lx.runtime.production.module.classpath">
+    <pathelement location="${lx.output.dir}"/>
+  </path>
+  
+  <path id="lx.module.classpath">
+    <path refid="${module.jdk.classpath.lx}"/>
+    <pathelement location="${lx.output.dir}"/>
+  </path>
+  
+  <path id="lx.runtime.module.classpath">
+    <pathelement location="${lx.testoutput.dir}"/>
+    <pathelement location="${lx.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.lx">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.lx">
+    <patternset refid="excluded.from.module.lx"/>
+  </patternset>
+  
+  <path id="lx.module.sourcepath">
+    <dirset dir="${module.lx.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="lx.module.test.sourcepath">
+    <dirset dir="${module.lx.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.lx" depends="compile.module.lx.production,compile.module.lx.tests" description="Compile module lx"/>
+  
+  <target name="compile.module.lx.production" depends="register.custom.compilers" description="Compile module lx; production classes">
+    <mkdir dir="${lx.output.dir}"/>
+    <javac2 destdir="${lx.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.lx}/javac">
+      <compilerarg line="${compiler.args.lx}"/>
+      <bootclasspath refid="lx.module.bootclasspath"/>
+      <classpath refid="lx.module.production.classpath"/>
+      <src refid="lx.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.lx"/>
+    </javac2>
+    
+    <copy todir="${lx.output.dir}">
+      <fileset dir="${module.lx.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.lx.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.lx.tests" depends="register.custom.compilers,compile.module.lx.production" description="compile module lx; test classes" unless="skip.tests">
+    <mkdir dir="${lx.testoutput.dir}"/>
+    <javac2 destdir="${lx.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.lx}/javac">
+      <compilerarg line="${compiler.args.lx}"/>
+      <bootclasspath refid="lx.module.bootclasspath"/>
+      <classpath refid="lx.module.classpath"/>
+      <src refid="lx.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.lx"/>
+    </javac2>
+    
+    <copy todir="${lx.testoutput.dir}">
+      <fileset dir="${module.lx.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.lx" description="cleanup module">
+    <delete dir="${lx.output.dir}"/>
+    <delete dir="${lx.testoutput.dir}"/>
+  </target>
+</project>
