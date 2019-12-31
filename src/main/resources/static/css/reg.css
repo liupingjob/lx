@@ -166,8 +166,8 @@ fieldset legend {
 fieldset legend span{font-size: 14px;padding: 0 0 0 20px; color:#999;cursor: pointer;}
 
 tr.grouptitle{background: #666;}
-tr.tr_0{ background:none; }
-tr.tr_1{ background:#efefef; }
+tr.tr_0{ background:none; height: 40px;}
+tr.tr_1{ background:#efefef; height: 38px; }
 
 tr.grouptitle h3{font-size: 12px; color: #ccc; margin-left:20px; }
 
